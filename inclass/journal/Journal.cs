@@ -1,20 +1,20 @@
+using System.IO; 
+
 public class Journal
 {
   public string _owner;
   public List<Entry> _entries = new List<Entry>();
   public string _description;
-  public List<string> prompts = new List<string> {
-        "Who was the most interesting person I interacted with today?",
-        "prompt 2",
-        "prompt 3",
-        "prompt 4",
-        "prompt 5",
-    };
 
   public Journal(string owner, string description)
   {
     _owner = owner;
     _description = description;
+  }
+
+  public void AddEntryToJournal(Entry entry)
+  {
+    _entries.Add(entry);
   }
 
   public void ShowAllEntries()
@@ -41,15 +41,38 @@ public class Journal
   {
     Console.WriteLine("Showing journal data");
   }
-  public void Save()
+  public void Save(string filename)
   {
     Console.WriteLine("Saving file");
-  }
-  public void Load()
-  {
-    Console.WriteLine("Loading file");
+
+    using (StreamWriter outputFile = new StreamWriter(filename))
+    {
+        foreach (Entry entry in _entries)
+        {
+          outputFile.WriteLine(entry._date);
+          outputFile.WriteLine(entry._prompt);
+          outputFile.WriteLine(entry._response);
+        }
+    }
   }
 
+  public void Load(string filename)
+  {
+      Console.WriteLine("Loading file");
+
+      string[] lines = System.IO.File.ReadAllLines(filename);
+
+      for (int i = 0; i < lines.Length; i += 3)
+      {
+          string date = lines[i];
+          string prompt = lines[i + 1];
+          string response = lines[i + 2];
+
+          Entry entry = new Entry(date, prompt, response);
+          _entries.Add(entry);
+      }
+  }
 }
+
 
 

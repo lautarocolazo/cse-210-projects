@@ -2,25 +2,25 @@ public class Entry
 {
   public string _date;
   public string _prompt;
-  public string _reponse;
+  public string _response;
 
-  public Entry(string date, string prompt, string response)
+  public Entry(string date, string prompt, string response = null)
   {
     _date = date;
     _prompt = prompt;
-    _reponse = response;
+    _response = response;
   }
 
   public void DisplayEntry()
   {
-    Console.WriteLine($"{_date}");
-    Console.WriteLine($"{_prompt}");
-    Console.WriteLine($"{_reponse}");
+    Console.WriteLine($"Date: {_date}");
+    Console.WriteLine($"Prompt: {_prompt}");
+    Console.WriteLine($"{_response}" + Environment.NewLine);
   }
 
   public void UpdateEntry()
   {
-    Console.WriteLine("Updateing entry");
+    Console.WriteLine("Updating entry");
   }
 
   public void DeleteEntry()
