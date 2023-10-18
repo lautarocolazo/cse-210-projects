@@ -11,9 +11,10 @@ public class Scripture
         random = new Random();
 
         string[] wordArray = text.Split(' ');
-
+        
         foreach (string wordText in wordArray)
         {
+            // Console.WriteLine($"Each word: {wordText}");
             _words.Add(new Word(wordText));
         }
     }
