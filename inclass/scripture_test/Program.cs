@@ -1,4 +1,4 @@
-﻿Scripture scripture = new Scripture(new Reference("Genesis", 1, 1, 2), "In the beginning God created the heavens and the earth.");
+﻿Scripture scripture = new Scripture(new Reference("Genesis", 1, 1), "In the beginning God created the heavens and the earth.");
 
 while (!scripture.IsCompletelyHidden())
 {

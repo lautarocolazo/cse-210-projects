@@ -53,7 +53,7 @@ public class Scripture
 
     public string GetRenderedReference()
     {
-        return $"{_reference.GetBook()} {_reference.GetChapter()}: {_reference.GetVerse()}-{_reference.GetEndVerse()}";
+        return _reference.GetRenderedText();
     }
 
     public bool IsCompletelyHidden()

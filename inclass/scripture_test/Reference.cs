@@ -13,6 +13,26 @@ public class Reference
         _endVerse = endVerse;
     }
 
+    public Reference(string book, int chapter, int verse)
+    {
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
+        _endVerse = 0;
+    }
+
+    public string GetRenderedText()
+    {
+        if (_endVerse == 0)
+        {
+            return $"{_book} {_chapter}: {_verse}";
+        }
+        else
+        {
+            return $"{_book}{_chapter}{_verse}-{_endVerse}";
+        }
+    }
+    
     public string GetBook()
     {
       return _book;
