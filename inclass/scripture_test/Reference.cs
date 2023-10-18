@@ -33,25 +33,5 @@ public class Reference
         }
     }
     
-    // public string GetBook()
-    // {
-    //   return _book;
-    // }
-    //
-    // public int GetChapter()
-    // {
-    //   return _chapter;
-    // }
-    // 
-    // public int GetVerse()
-    // {
-    //   return _verse;
-    // }
-    //
-    // public int GetEndVerse()
-    // {
-    //   return _endVerse;
-    // }
-    //
 }
 

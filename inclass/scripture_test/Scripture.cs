@@ -48,7 +48,7 @@ public class Scripture
         {
             renderedWords.Add(word.GetRenderedText());
         }
-
+        
         return string.Join(" ", renderedWords);
     }
 

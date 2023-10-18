@@ -13,6 +13,7 @@ while (!scripture.IsCompletelyHidden())
         break;
     }
     scripture.HideWords(3);
+    Console.Clear();
 }
 
 Console.WriteLine("End of program");
