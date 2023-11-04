@@ -8,6 +8,39 @@ class BreathingActivity : Activity
 
   public void RunActivity()
   {
-    Console.WriteLine("RunActivity method");
+    // int i = 0;
+
+    DateTime startTime = DateTime.Now;
+    DateTime endTime = startTime.AddSeconds(_duration);
+
+    while (DateTime.Now <= endTime)
+    {
+      Console.WriteLine();
+      Console.Write("Breath in...");
+      for (int j = 4; j > 0; j--)
+      {
+        Console.Write(j);
+        Thread.Sleep(1000);
+        Console.Write("\b \b");
+      }
+
+      Console.WriteLine();
+      Console.Write("Now breath out...");
+      for (int j = 6; j > 0; j--)
+      {
+        Console.Write(j);
+        Thread.Sleep(1000);
+        Console.Write("\b \b");
+      }
+
+      Console.WriteLine();
+      Console.WriteLine();
+      // i++;
+      //
+      // if (i >= _spinnerChars.Count)
+      // {
+      //   i = 0;
+      // }
+    }
   }
 }

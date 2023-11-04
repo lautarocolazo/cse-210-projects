@@ -2,7 +2,8 @@ class Activity
 {
   protected string _activity;
   protected string _description;
-  protected string _duration;
+  protected int _duration;
+  protected List<string> _spinnerChars = new List<string> {"|", "/", "-", "\\", "|", "/", "-", "\\"};
 
   public Activity(string activity, string description, int duration)
   {
@@ -23,16 +24,26 @@ class Activity
   {
     Console.WriteLine("Well done!!");
 
-    if (_duration)
+    PauseWhileSpinner();
+
+    if (_duration > 0)
     {
-      Console.WriteLine($"You have completed another {_duration} seconds of the {_activity}");
+      Console.WriteLine(Environment.NewLine + $"You have completed another {_duration} seconds of the {_activity}");
+      PauseWhileSpinner();
     }
+
+    Console.Clear();
 
   }
   
   public void PauseWhileSpinner()
   {
-    Console.WriteLine("PauseWhileSpinner method");
+    foreach (string s in _spinnerChars)
+    {
+      Console.Write(s);
+      Thread.Sleep(300);
+      Console.Write("\b \b");
+    }
   }
 
   public void PauseWhileTimer()
