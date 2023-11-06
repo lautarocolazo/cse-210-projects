@@ -11,6 +11,6 @@ class Rectangle : Shape
 
   public override double GetArea()
   {
-    return Math.Pow(_width, 2) + Math.Pow(_height, 2);
+    return _width * _height;
   }
 }
