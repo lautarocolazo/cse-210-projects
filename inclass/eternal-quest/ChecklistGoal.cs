@@ -46,6 +46,7 @@ public class ChecklistGoal : Goal
 
     if (_currentTimesAccomplished == _timesToAccomplished)
     {
+      Console.WriteLine("Good job! You got all the times that you proposed yourself!");
       _points += _bonusPoints;
       _isComplete = true;
       return;
