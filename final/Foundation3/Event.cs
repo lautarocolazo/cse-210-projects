@@ -22,13 +22,6 @@ public class Event
     return $"{_title}, {_description}, {_date}, {_time}, {_address.GetFullAddress()}";
   }
 
-  public string FullDetails()
-  {
-    return $"Event type: {_type}" +
-    Environment.NewLine +
-    $"{_title}, {_description}, {_date}, {_time}, {_address.GetFullAddress()}";
-  }
-
   public string ShortDescription()
   {
     return $"Event type: {_type}" +

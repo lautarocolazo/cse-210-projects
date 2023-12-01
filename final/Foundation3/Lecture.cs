@@ -19,4 +19,15 @@ public class Lecture : Event
     return _limitedCapacity;
   }
 
+  public string FullDetails()
+  {
+    return $"Event type: {_type}" +
+    Environment.NewLine +
+    $"{_title}, {_description}, {_date}, {_time}, {_address.GetFullAddress()}" +
+    Environment.NewLine +
+    $"Speaker: {_speaker}" +
+    Environment.NewLine +
+    $"Limited capacity: {_limitedCapacity}";
+  }
+
 }
