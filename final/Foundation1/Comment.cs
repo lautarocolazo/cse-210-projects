@@ -14,5 +14,9 @@ public class Comment
     return _author;
   }
 
+  public string GetContent()
+  {
+    return _content;
+  }
 }
 

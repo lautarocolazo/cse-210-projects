@@ -30,6 +30,17 @@ public class Video
     Console.WriteLine($"Author of the video: {_author}");
     Console.WriteLine($"Length of the video: {_length}");
     Console.WriteLine($"Number of comments on the video: {_comments.Count}");
+    DisplayComments();
+  }
+
+  public void DisplayComments()
+  {
+    Console.WriteLine("COMMENTS");
+    foreach (Comment comment in _comments)
+    {
+      Console.Write($"{comment.GetAuthor()}");
+      Console.WriteLine($" {comment.GetContent()}");
+    }
   }
 
 }

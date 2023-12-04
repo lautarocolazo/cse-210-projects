@@ -10,7 +10,7 @@ class Program
 
         Running r = new Running("01 Dec 2023", 30, 4.8);
         StationaryBike b = new StationaryBike("01 Dec 2023", 45, 15);
-        Swimming s = new Swimming("01 Dec 2023", 75, 8);
+        Swimming s = new Swimming("01 Dec 2023", 10, 16);
 
         activities.Add(r);
         activities.Add(b);
