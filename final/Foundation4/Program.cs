@@ -8,9 +8,9 @@ class Program
 
         List<Activity> activities = new List<Activity>();
 
-        Running r = new Running("01 Dec 2023", 40, 4.56);
-        StationaryBike b = new StationaryBike("01 Dec 2023", 60, 10);
-        Swimming s = new Swimming("01 Dec 2023", 75, 10);
+        Running r = new Running("01 Dec 2023", 30, 4.8);
+        StationaryBike b = new StationaryBike("01 Dec 2023", 45, 15);
+        Swimming s = new Swimming("01 Dec 2023", 75, 8);
 
         activities.Add(r);
         activities.Add(b);

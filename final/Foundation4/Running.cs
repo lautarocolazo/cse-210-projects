@@ -17,7 +17,7 @@ public class Running : Activity
 
   public override double GetPace()
   {
-    return _distance / _length;
+    return _length / _distance;
   }
 
   public override string GetSummary()
